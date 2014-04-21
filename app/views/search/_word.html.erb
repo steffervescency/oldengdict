@@ -1,0 +1,16 @@
+<tr><td>
+  
+  <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-<%= word.id %>">
+    &nbsp;
+  </button>
+
+<% if res[1][1] then %>
+  <%= word.forms[res[1][1]]%> 
+  (<%= res[1][1].to_s.gsub("_", ". ") + ". of " + word.citation %>)
+<% else %>
+  <%= word.citation %> (<%= word.pos %>)
+<% end %>
+</td>
+
+<td><%= word.eng %></td>
+</tr>

@@ -1,0 +1,46 @@
+body {
+  background-color: #F2F5A9;
+  margin-left:75px;
+}
+#searchbox, #searchfrom {
+  display:inline-block;
+}
+.left_col, .right-col {
+  display:inline-block;
+  float: left;
+  width:150px;
+}
+.right-col {
+  clear:both;
+}
+#dict th{
+  width:175px;
+}
+.modal .modal-body {
+    max-height: 420px;
+    overflow-y: auto;
+}
+#search_form {
+  padding: 10px;
+}
+#search {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+#searchfrom {
+  margin-left: 20px;
+  margin-top: -10px;
+}
+#searchfrom input {
+  margin: 10px;
+}
+#ash {
+  margin-right: 10px;
+}
+.radio {
+  margin: 10px;
+}
+h1 a, h1 a:hover, h1 a:visited{
+  color:black;
+  text-decoration:none;
+}

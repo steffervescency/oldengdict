@@ -1,0 +1,51 @@
+
+<div class="modal fade" id="modal-<%= word.id %>" tabindex="-1" role="dialog" aria-labelledby="#label-<%= word.id %>"
+  aria-hidden="true" style="display:none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="label-<%= word.id %>"><%= word.citation %> - <%= word.eng %></h4>
+      </div>
+      <div class="modal-body">
+        <h5>Present</h5>
+        <div class="left_col">ic <%= word.forms[:pres_1] %></div>
+        <div class="right_col">wē <%= word.forms[:pres_pl] %></div>
+        <div class="left_col">ðu <%= word.forms[:pres_2] %></div>
+        <div class="right_col">gē <%= word.forms[:pres_pl] %></div>
+        <div class="left_col">hē <%= word.forms[:pres_3] %></div>
+        <div class="right_col">hīe <%= word.forms[:pres_pl] %></div>
+        
+        <h5>Past</h5>
+        <div class="left_col">ic <%= word.forms[:past_1] %></div>
+        <div class="right_col">wē <%= word.forms[:past_pl] %></div>
+        <div class="left_col">ðu <%= word.forms[:past_2] %></div>
+        <div class="right_col">gē <%= word.forms[:past_pl] %></div>
+        <div class="left_col">hēo <%= word.forms[:past_3] %></div>
+        <div class="right_col">hīe <%= word.forms[:past_pl] %></div>
+        
+        <h5>Present subjunctive</h5>
+        <div class="left_col">ic <%= word.forms[:pres_subj_sg] %></div>
+        <div class="right_col">wē <%= word.forms[:pres_subj_pl] %></div>
+        
+        <h5>Past subjunctive</h5>
+        <div class="left_col">ic <%= word.forms[:past_subj_sg] %></div>
+        <div class="right_col">wē <%= word.forms[:past_subj_pl] %></div>
+        
+        <h5>Imperative</h5>
+        <div class="left_col">ðu <%= word.forms[:imp_sg] %>!</div>
+        <div class="right_col">gē <%= word.forms[:imp_pl] %>!</div>
+        
+        <h5>Past participle</h5>
+        <div class="right_col"><%= word.forms[:part_past] %></div>
+        
+        <h5>Present participle</h5>
+        <div class="right_col"><%= word.forms[:part_pres] %></div>
+        
+        <h5>Inflected infinitive</h5>
+        <div class="right_col">tō <%= word.forms[:inflect_inf] %></div>
+        
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+          <h1><a href="/">Old English ↔ English Dictionary</a></h1>
+
+
+        <div id="searchbox">
+          <form action="search" id="search_form" method="get" onsubmit="submit_search();">
+          <input type="text" class="form-control" id="search" placeholder="search for..."
+           value="<%= @word %>">
+          <button type="submit" class="btn btn-default" id="go">Search</button>
+          <br/>
+          <button type="button" class="btn btn-default" id="ash">&aelig;</button>
+          <button type="button" class="btn btn-default" id="thorn">&eth; / &thorn;</button>
+        </form>
+        </div>
+      
+      <div id="searchfrom">
+        <strong>Search from:</strong> <br/>
+            <label><input type="radio" value="search" name="sourcelang" checked="checked" /> Old English</label>
+            <label><input type="radio" value="searchpde" name="sourcelang" 
+              <% if controller.action_name == "findpde" %>
+              checked="checked"
+              <% end %> /> Modern English</label>
+      </div>
+      
+      <br/>
+      
+    <% if @results and @results.any? then %>
+    <div id="searched">Results for: <strong><%= @word %></strong></div>
+        <table class="table" id="dict">
+          <thead><tr>
+            <th>Old English</th>
+            <th>Modern English</th>
+          </tr></thead>
+          <tbody>
+            <% @results.each do |res| %>
+            <% word = res[0]%>
+              <%= render 'search/word', :res => res, :word => word %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <% @results.each do |res| %>
+        <%= render 'search/modal', :word => res[0] %>
+      <% end %>
+    <% elsif @results %>
+        <div id="searched">No results found for: <strong><%= @word %></strong></div>
+    <% end %>
